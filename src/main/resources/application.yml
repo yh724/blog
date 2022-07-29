@@ -1,0 +1,11 @@
+server:
+  port: 8181
+  servlet:
+    context-path: /myblog
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: jkcn0418
+    url: jdbc:mysql://106.14.7.14:3306/blog
