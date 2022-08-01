@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jklearn.blog.mapper.UsersMapper">
+  <resultMap id="BaseResultMap" type="com.jklearn.blog.domain.Users">
+    <!--@mbg.generated generated on Mon Aug 01 16:15:22 CST 2022.-->
+    <!--@Table users-->
+    <id column="user_id" jdbcType="CHAR" property="userId" />
+    <result column="user_ip" jdbcType="VARCHAR" property="userIp" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_password" jdbcType="VARCHAR" property="userPassword" />
+    <result column="user_email" jdbcType="VARCHAR" property="userEmail" />
+    <result column="user_profile_photo" jdbcType="VARCHAR" property="userProfilePhoto" />
+    <result column="user_registration_time" jdbcType="CHAR" property="userRegistrationTime" />
+    <result column="user_birthday" jdbcType="CHAR" property="userBirthday" />
+    <result column="user_age" jdbcType="TINYINT" property="userAge" />
+    <result column="user_telephone_number" jdbcType="INTEGER" property="userTelephoneNumber" />
+    <result column="user_nickname" jdbcType="VARCHAR" property="userNickname" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Mon Aug 01 16:15:22 CST 2022.-->
+    user_id, user_ip, user_name, user_password, user_email, user_profile_photo, user_registration_time, 
+    user_birthday, user_age, user_telephone_number, user_nickname
+  </sql>
+</mapper>
