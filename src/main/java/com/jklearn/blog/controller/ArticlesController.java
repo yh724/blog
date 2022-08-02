@@ -35,8 +35,18 @@ public class ArticlesController {
         return json;
     }
 
+    @PostMapping
+    public String saveArticle(@RequestBody Articles articles){
+        return articlesService.insertArticle(articles);
+    }
+
+    @PutMapping
+    public String updateArticle(@RequestBody Articles articles){
+        return articlesService.updateArticle(articles);
+    }
+
     @DeleteMapping("/{id}")
-    public String deleteOneArticle(@PathVariable Integer id){
+    public String deleteOneArticle(@PathVariable String id){
         return articlesService.deleteOneArticle(id);
     }
 }

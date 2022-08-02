@@ -2,14 +2,20 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jklearn.blog.mapper.SortsMapper">
   <resultMap id="BaseResultMap" type="com.jklearn.blog.domain.Sorts">
-    <!--@mbg.generated generated on Mon Aug 01 16:15:22 CST 2022.-->
+    <!--@mbg.generated generated on Tue Aug 02 16:47:52 CST 2022.-->
     <!--@Table sorts-->
     <id column="sort_id" jdbcType="CHAR" property="sortId" />
     <result column="sort_name" jdbcType="VARCHAR" property="sortName" />
+    <result column="sort_alias" jdbcType="VARCHAR" property="sortAlias" />
     <result column="sort_description" jdbcType="LONGVARCHAR" property="sortDescription" />
+    <result column="sort_createBy" jdbcType="CHAR" property="sortCreateBy" />
+    <result column="sort_createDate" jdbcType="CHAR" property="sortCreateDate" />
+    <result column="sort_editBy" jdbcType="CHAR" property="sortEditBy" />
+    <result column="sort_editDate" jdbcType="CHAR" property="sortEditDate" />
   </resultMap>
   <sql id="Base_Column_List">
-    <!--@mbg.generated generated on Mon Aug 01 16:15:22 CST 2022.-->
-    sort_id, sort_name, sort_description
+    <!--@mbg.generated generated on Tue Aug 02 16:47:52 CST 2022.-->
+    sort_id, sort_name, sort_alias, sort_description, sort_createBy, sort_createDate, 
+    sort_editBy, sort_editDate
   </sql>
 </mapper>

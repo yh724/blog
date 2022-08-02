@@ -8,5 +8,9 @@ public interface ArticlesService{
 
     List<Articles> selectArticles(Integer currentPage,Integer pageSize);
 
-    String deleteOneArticle(Integer id);
+    String deleteOneArticle(String id);
+
+    String insertArticle(Articles articles);
+
+    String updateArticle(Articles articles);
 }
