@@ -71,11 +71,14 @@
               <value>
                 <TableGenerateConfig>
                   <option name="deleteByPrimayKeyEnabled" value="false" />
+                  <option name="generatedKey" value="" />
                   <option name="insertMethodEnabled" value="false" />
                   <option name="insertSelectiveMethodEnabled" value="false" />
                   <option name="javaModelName" value="Labels" />
                   <option name="moduleName" value="blog" />
                   <option name="selectByPrimaryKeyEnabled" value="false" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
                   <option name="updateByPrimaryKeySelectiveEnabled" value="false" />
                   <option name="updateByPrimaykeyEnabled" value="false" />
                   <option name="useActualColumnName" value="false" />

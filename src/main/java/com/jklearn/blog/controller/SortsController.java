@@ -3,13 +3,13 @@ package com.jklearn.blog.controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.pagehelper.PageInfo;
-import com.jklearn.blog.domain.Articles;
 import com.jklearn.blog.domain.Sorts;
+import com.jklearn.blog.exception.BlogEnum;
 import com.jklearn.blog.service.SortsService;
+import com.jklearn.blog.vo.CommonReturnType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import javax.sound.midi.Soundbank;
 import java.util.HashMap;
 import java.util.List;
 
@@ -45,5 +45,15 @@ public class SortsController {
     @PutMapping
     public String updateSort(@RequestBody Sorts sort){
         return sortsService.updateSort(sort);
+    }
+
+    @DeleteMapping("/{id}")
+    public <T> CommonReturnType<T> deleteSort(@PathVariable String id){
+        int res = sortsService.deleteSort(id);
+        if(res == 1){
+            return CommonReturnType.success(null);
+        }else {
+            return CommonReturnType.fail(BlogEnum.SORT_DELETE);
+        }
     }
 }

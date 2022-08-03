@@ -28,30 +28,30 @@ public class Labels {
     /**
      * 标签描述
      */
-    @Column(name = "label_description")
-    private String labelDescription;
+    @Column(name = "label_color")
+    private String labelColor;
 
     /**
      * 标签创建人
      */
     @Column(name = "label_createBy")
-    private String labelCreateBy;
+    private String labelCreateby;
 
     /**
      * 标签创建时间
      */
     @Column(name = "label_createDate")
-    private String labelCreateDate;
+    private String labelCreatedate;
 
     /**
      * 标签修改人
      */
     @Column(name = "label_editBy")
-    private String labelEditBy;
+    private String labelEditby;
 
     /**
      * 标签修改时间
      */
     @Column(name = "label_editDate")
-    private String labelEditDate;
+    private String labelEditdate;
 }

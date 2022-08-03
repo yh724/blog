@@ -11,4 +11,6 @@ public interface SortsService{
     String insertSort(Sorts sort);
 
     String updateSort(Sorts sort);
+
+    int deleteSort(String id);
 }

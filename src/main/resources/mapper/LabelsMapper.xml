@@ -2,20 +2,20 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jklearn.blog.mapper.LabelsMapper">
   <resultMap id="BaseResultMap" type="com.jklearn.blog.domain.Labels">
-    <!--@mbg.generated generated on Tue Aug 02 16:47:52 CST 2022.-->
+    <!--@mbg.generated generated on Wed Aug 03 15:12:48 CST 2022.-->
     <!--@Table labels-->
     <id column="label_id" jdbcType="CHAR" property="labelId" />
     <result column="label_name" jdbcType="VARCHAR" property="labelName" />
     <result column="label_alias" jdbcType="VARCHAR" property="labelAlias" />
-    <result column="label_description" jdbcType="LONGVARCHAR" property="labelDescription" />
-    <result column="label_createBy" jdbcType="CHAR" property="labelCreateBy" />
-    <result column="label_createDate" jdbcType="CHAR" property="labelCreateDate" />
-    <result column="label_editBy" jdbcType="CHAR" property="labelEditBy" />
-    <result column="label_editDate" jdbcType="CHAR" property="labelEditDate" />
+    <result column="label_color" jdbcType="LONGVARCHAR" property="labelColor" />
+    <result column="label_createBy" jdbcType="CHAR" property="labelCreateby" />
+    <result column="label_createDate" jdbcType="CHAR" property="labelCreatedate" />
+    <result column="label_editBy" jdbcType="CHAR" property="labelEditby" />
+    <result column="label_editDate" jdbcType="CHAR" property="labelEditdate" />
   </resultMap>
   <sql id="Base_Column_List">
-    <!--@mbg.generated generated on Tue Aug 02 16:47:52 CST 2022.-->
-    label_id, label_name, label_alias, label_description, label_createBy, label_createDate, 
+    <!--@mbg.generated generated on Wed Aug 03 15:12:48 CST 2022.-->
+    label_id, label_name, label_alias, label_color, label_createBy, label_createDate, 
     label_editBy, label_editDate
   </sql>
 </mapper>

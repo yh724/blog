@@ -8,10 +8,12 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import com.jklearn.blog.mapper.SortsMapper;
 import com.jklearn.blog.service.SortsService;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class SortsServiceImpl implements SortsService{
 
     @Resource
@@ -47,5 +49,10 @@ public class SortsServiceImpl implements SortsService{
             message = "success";
         }
         return message;
+    }
+
+    @Override
+    public int deleteSort(String id) {
+        return sortsMapper.deleteByPrimaryKey(id);
     }
 }
