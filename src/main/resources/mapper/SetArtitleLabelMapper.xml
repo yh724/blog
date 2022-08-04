@@ -11,4 +11,7 @@
     <!--@mbg.generated generated on Mon Aug 01 16:15:22 CST 2022.-->
     article_id, label_id
   </sql>
+    <select id="selectWithArticleId" resultMap="BaseResultMap">
+        select * from set_artitle_label where article_id=#{articleId}
+    </select>
 </mapper>

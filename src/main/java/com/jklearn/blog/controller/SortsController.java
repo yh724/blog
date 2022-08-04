@@ -19,6 +19,11 @@ public class SortsController {
     @Resource
     private SortsService sortsService;
 
+    @GetMapping
+    public List<Sorts> selectAll(){
+        return sortsService.selectAll();
+    }
+
     @GetMapping("/{currentPage}/{pageSize}")
     public String getSorts(@PathVariable Integer currentPage,
                               @PathVariable Integer pageSize){

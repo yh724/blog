@@ -2,6 +2,7 @@ package com.jklearn.blog.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.jklearn.blog.domain.Sorts;
+import com.jklearn.blog.mapper.SetArtitleSortMapper;
 import com.jklearn.blog.utils.DateTimeUtil;
 import com.jklearn.blog.utils.UUIDUtil;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,9 @@ public class SortsServiceImpl implements SortsService{
 
     @Resource
     private SortsMapper sortsMapper;
+
+    @Resource
+    private SetArtitleSortMapper setArtitleSortMapper;
 
     @Override
     public List<Sorts> selectSorts(Integer currentPage, Integer pageSize) {
@@ -53,6 +57,17 @@ public class SortsServiceImpl implements SortsService{
 
     @Override
     public int deleteSort(String id) {
+        setArtitleSortMapper.removeAllBySortKey(id);
         return sortsMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public List<Sorts> selectAll() {
+        return sortsMapper.selectAll();
+    }
+
+    @Override
+    public Sorts selectSortById(String sortId) {
+        return sortsMapper.selectByPrimaryKey(sortId);
     }
 }

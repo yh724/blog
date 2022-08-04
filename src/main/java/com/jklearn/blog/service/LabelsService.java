@@ -13,4 +13,6 @@ public interface LabelsService{
     int updateLabel(Labels label);
 
     int deleteOneLabel(String id);
+
+    Labels selectLabelById(String labelId);
 }

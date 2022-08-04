@@ -1,6 +1,7 @@
 package com.jklearn.blog.service.impl;
 
 import com.jklearn.blog.domain.Labels;
+import com.jklearn.blog.mapper.SetArtitleLabelMapper;
 import com.jklearn.blog.utils.DateTimeUtil;
 import com.jklearn.blog.utils.UUIDUtil;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,9 @@ public class LabelsServiceImpl implements LabelsService{
 
     @Resource
     private LabelsMapper labelsMapper;
+
+    @Resource
+    private SetArtitleLabelMapper setArtitleLabelMapper;
 
     @Override
     public List<Labels> selectAll() {
@@ -38,7 +42,13 @@ public class LabelsServiceImpl implements LabelsService{
 
     @Override
     public int deleteOneLabel(String id) {
+        setArtitleLabelMapper.removeAllByLabelKey(id);
         return labelsMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public Labels selectLabelById(String labelId) {
+        return labelsMapper.selectByPrimaryKey(labelId);
     }
 
 

@@ -13,4 +13,8 @@ public interface SortsService{
     String updateSort(Sorts sort);
 
     int deleteSort(String id);
+
+    List<Sorts> selectAll();
+
+    Sorts selectSortById(String sortId);
 }

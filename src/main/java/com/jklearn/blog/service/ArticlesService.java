@@ -1,6 +1,7 @@
 package com.jklearn.blog.service;
 
 import com.jklearn.blog.domain.Articles;
+import com.jklearn.blog.vo.ResponseVo;
 
 import java.util.List;
 
@@ -10,7 +11,7 @@ public interface ArticlesService{
 
     String deleteOneArticle(String id);
 
-    String insertArticle(Articles articles);
+    String insertArticle(ResponseVo vo);
 
-    String updateArticle(Articles articles);
+    String updateArticle(ResponseVo vo);
 }

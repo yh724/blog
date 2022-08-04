@@ -1,9 +1,12 @@
 package com.jklearn.blog.domain;
 
 import javax.persistence.*;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 @Table(name = "set_artitle_label")
 public class SetArtitleLabel {
     /**
