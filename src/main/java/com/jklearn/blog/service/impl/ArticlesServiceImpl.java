@@ -94,4 +94,9 @@ public class ArticlesServiceImpl implements ArticlesService {
         }
         return message;
     }
+
+    @Override
+    public List<Articles> selectAll() {
+        return articlesMapper.selectAll();
+    }
 }

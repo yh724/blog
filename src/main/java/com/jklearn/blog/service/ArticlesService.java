@@ -14,4 +14,6 @@ public interface ArticlesService{
     String insertArticle(ResponseVo vo);
 
     String updateArticle(ResponseVo vo);
+
+    List<Articles> selectAll();
 }

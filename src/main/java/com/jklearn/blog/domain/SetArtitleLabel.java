@@ -16,6 +16,7 @@ public class SetArtitleLabel {
     @Column(name = "article_id")
     private String articleId;
 
+    @Id
     @Column(name = "label_id")
     private String labelId;
 }
