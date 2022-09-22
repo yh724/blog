@@ -35,9 +35,8 @@ public class BlogTimer {
     @Resource
     private SetArtitleLabelService setArtitleLabelService;
 
-    @Scheduled(cron = "0 0/1 * * * ?")
+    @Scheduled(cron = "10 42 * * * ?")
     private void task(){
-        List<Articles> articles = articlesService.selectAll();
         List<ArticleVo> articleVos = this.getArticleInfo();
         for (ArticleVo vo : articleVos) {
             Articles a = vo.getArticle();
@@ -45,7 +44,7 @@ public class BlogTimer {
             Sorts sort = vo.getArticleSort();
             if (a != null) {
                 StringBuffer articleFile = new StringBuffer("");
-                StringBuffer path = new StringBuffer("D:\\blog-hexo\\hexo\\source\\_posts\\");
+                StringBuffer path = new StringBuffer("D:\\hexo\\blog\\source\\_posts\\");
                 articleFile.append("---");
                 articleFile.append("\ntitle: ").append(a.getArticleTitle());
                 articleFile.append("\ndate: ").append(a.getArticleDate());
@@ -59,6 +58,8 @@ public class BlogTimer {
                 articleFile.append("\n---\n");
                 articleFile.append(a.getArticleContent());
                 path.append(a.getArticleTitle()).append(".md");
+                System.out.println(articleFile);
+                System.out.println(path);
                 FileUtil.touch(FileUtil.writeUtf8String(String.valueOf(articleFile), String.valueOf(path)));
             }
         }
